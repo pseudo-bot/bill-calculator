@@ -49,12 +49,19 @@ body {
 	flex-basis: 45%;
 }
 
+.calculator > * {
+	margin-block: 2rem;
+}
+
+.calculator div:nth-child(1) {
+	margin-top: 0rem;
+}
+
 .tip-input {
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
 	width: 100%;
-	height: 14rem;
 }
 
 .text {
@@ -224,7 +231,7 @@ input:focus {
 	.main-interface {
 		flex-direction: column;
 		width: 32rem;
-		height: 75rem;
+		height: auto;
 	}
 
 	.calculator {
