@@ -1,0 +1,241 @@
+html {
+	font-size: 10px;
+}
+
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'space mono';
+	background-color: hsl(185, 41%, 84%);
+}
+
+#root {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-inline: 5rem;
+}
+
+.logo {
+	width: 8rem;
+	margin-top: 15rem;
+	margin-bottom: 8rem;
+}
+
+.main-interface {
+	position: relative;
+	height: 40rem;
+	width: 80rem;
+	background-color: white;
+	border-radius: 2rem;
+	display: flex;
+	padding: 3rem;
+	box-shadow: 0 1rem 1rem hsl(184, 38%, 79%);
+	justify-content: space-between;
+}
+
+.calculator {
+	display: flex;
+	align-items: space-around;
+	margin-inline-end: 1rem;
+	flex-direction: column;
+	justify-content: space-around;
+	flex-basis: 45%;
+}
+
+.tip-input {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	width: 100%;
+	height: 14rem;
+}
+
+.text {
+	font-size: 1.4rem;
+	font-weight: 600;
+	flex-basis: 100%;
+	color: hsl(183, 100%, 15%);
+	margin-block-end: 1rem;
+	display: inline-block;
+}
+
+.error {
+	position: absolute;
+	right: 0;
+	color: rgb(231, 71, 43);
+	display: none;
+}
+
+.error--show {
+	display: inline-block;
+}
+
+.btn-container {
+	flex-basis: 33%;
+	padding: 3px;
+}
+
+.tip-btn {
+	font-weight: 900;
+	background-color: hsl(183, 100%, 15%);
+	color: #fff;
+	font-size: 2rem;
+	flex-basis: 30%;
+	margin-inline: 0.5rem;
+	border-radius: 0.5rem;
+	display: grid;
+	place-items: center;
+	padding-block: 5px;
+}
+
+.input-container {
+	padding: 3px;
+	display: flex;
+	justify-content: center;
+	flex-basis: 33%;
+}
+
+.tip-input input {
+	outline: 0;
+	border: 0;
+	font-family: 'space mono';
+	font-weight: 900;
+	font-size: 2rem;
+	width: 100%;
+	text-align: center;
+	color: hsl(183, 100%, 15%);
+	padding-block: 3px;
+	border: 2px solid transparent;
+	border-radius: 5px;
+}
+
+.tip-btn:hover {
+	background-color: hsl(184, 38%, 79%);
+	color: hsl(183, 100%, 15%);
+	cursor: pointer;
+}
+
+.tip-btn--selected {
+	background-color: hsl(184, 38%, 79%);
+	color: hsl(183, 100%, 15%);
+}
+
+.input input {
+	height: 3.5rem;
+	width: 100%;
+	border-radius: 5px;
+	outline: none;
+	border: 2px solid rgb(215, 218, 218);
+	text-align: right;
+	font-size: 2rem;
+	font-family: 'space mono';
+	color: hsl(183, 100%, 15%);
+}
+
+input:focus {
+	border-radius: 5px;
+	border: 2px solid hsl(172, 67%, 45%);
+}
+
+.input {
+	position: relative;
+}
+
+.input-icons {
+	position: absolute;
+	top: 4rem;
+	left: 1.5rem;
+}
+
+.error-input {
+	border: 2px solid rgb(231, 71, 43);
+}
+
+/* Bill Section */
+
+.bill-section {
+	background-color: hsl(183, 100%, 15%);
+	border-radius: 1rem;
+	display: flex;
+	padding: 3rem;
+	flex-basis: 48%;
+	color: white;
+	flex-direction: column;
+	position: relative;
+}
+
+.bill--reset {
+	font-family: 'space mono';
+	font-weight: 900;
+	width: 80%;
+	color: hsl(183, 100%, 15%);
+	background-color: hsl(172, 67%, 45%);
+	border: 0px;
+	font-size: 1.8rem;
+	border-radius: 5px;
+	align-self: center;
+	cursor: pointer;
+	padding: 0.5rem;
+	position: absolute;
+	bottom: 2rem;
+}
+
+.bill--reset:hover {
+	background-color: hsl(184, 38%, 79%);
+}
+
+.bill-text {
+	display: inline-block;
+	font-size: 1.5rem;
+}
+
+.sub-text {
+	margin-block-end: 5rem;
+	color: hsl(184, 38%, 79%);
+	font-size: 1.2rem;
+}
+
+.bill--tip,
+.bill--total {
+	position: relative;
+}
+
+.amount {
+	position: absolute;
+	font-size: 3rem;
+	color: hsl(172, 67%, 45%);
+	right: 0;
+	font-weight: 600;
+	top: 0;
+}
+
+@media screen and (max-width: 800px) {
+	.logo {
+		margin-block: 4rem;
+	}
+
+	.main-interface {
+		flex-direction: column;
+		width: 32rem;
+		height: 75rem;
+	}
+
+	.calculator {
+		margin-block-end: 3rem;
+		flex-basis: 75%;
+	}
+
+	.btn-container {
+		flex-basis: 50%;
+	}
+	.input-container {
+		flex-basis: 50%;
+	}
+}
