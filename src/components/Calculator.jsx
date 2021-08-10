@@ -55,7 +55,9 @@ export default (props) => {
 						if (e.target.value < 0) e.target.value = 0;
 						props.onBillChange(e.target.value);
 					}}
+					id="input-error"
 				/>
+				<label htmlFor="input-error"></label>
 			</div>
 			<div className='tip-input'>
 				<span className='text'>Select tip %</span>
@@ -72,12 +74,14 @@ export default (props) => {
 						onChange={handleTipValue}
 						value={props.tipPerc}
 						onFocus={clearHighlight}
+						id="input--tip"
 					/>
+					<label htmlFor="input--tip"></label>
 				</div>
 			</div>
 
 			<div className='input input--person'>
-				<img src={personIcon} className='input-icons' />
+				<img src={personIcon} className='input-icons' alt="Dollar Icon"/>
 				<span className='text'>Number of persons</span>
 				<span
 					className={
@@ -94,7 +98,9 @@ export default (props) => {
 						if (e.target.value < 0) e.target.value = 0;
 						props.onPersonChange(e.target.value);
 					}}
+					id="error-input-id"
 				/>
+				<label htmlFor="error-input-id"></label>
 			</div>
 		</div>
 	);

@@ -42,7 +42,6 @@ body {
 
 .calculator {
 	display: flex;
-	align-items: space-around;
 	margin-inline-end: 1rem;
 	flex-direction: column;
 	justify-content: space-around;
