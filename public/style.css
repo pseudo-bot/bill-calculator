@@ -159,6 +159,12 @@ input:focus {
 	position: absolute;
 	top: 4rem;
 	left: 1.5rem;
+	font-size: 3rem;
+}
+
+.rupee {
+	color: hsl(184, 23%, 73%);
+	top: 2.5rem;
 }
 
 .error-input {
@@ -203,24 +209,23 @@ input:focus {
 	font-size: 1.5rem;
 }
 
-.sub-text {
-	margin-block-end: 5rem;
-	color: hsl(184, 38%, 79%);
-	font-size: 1.2rem;
-}
-
-.bill--tip,
-.bill--total {
+.bill-details {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 5rem;
 	position: relative;
 }
 
-.amount {
+.sub-text {
+	color: hsl(184, 38%, 79%);
+	font-size: 1.2rem;
 	position: absolute;
+	top: 3rem;
+}
+
+.amount {
 	font-size: 3rem;
-	color: hsl(172, 67%, 45%);
-	right: 0;
-	font-weight: 600;
-	top: 0;
+	font-weight: 900;
 }
 
 @media screen and (max-width: 800px) {
@@ -232,6 +237,8 @@ input:focus {
 		flex-direction: column;
 		width: 32rem;
 		height: auto;
+		margin-bottom: 3rem;
+
 	}
 
 	.calculator {
@@ -244,5 +251,15 @@ input:focus {
 	}
 	.input-container {
 		flex-basis: 50%;
+	}
+
+	.bill-details {
+		flex-direction: column;
+		margin-bottom: 4rem;
+	}
+
+	.amount {
+		font-size: 2rem;
+		margin-top: 4rem;
 	}
 }

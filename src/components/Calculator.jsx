@@ -45,7 +45,7 @@ export default (props) => {
 	return (
 		<div className='calculator'>
 			<div className='input input--bill'>
-				<img src={dollarIcon} className='input-icons' />
+				<div className="input-icons rupee">&#8377;</div>
 				<span className='text'>Bill</span>
 				<input
 					type='number'
